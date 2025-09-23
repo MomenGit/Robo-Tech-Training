@@ -1,33 +1,34 @@
 from typing import Any
 from multi_sensor_validator.i_publisher import IPublisher
 from rclpy.node import Node
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 from std_msgs.msg import Int32
 
-class SensorNode(Node,IPublisher,ABC):
+
+class SensorNode(Node, IPublisher, ABC):
     """Abstract base node for sensors that publish data."""
-    
+
     def __init__(self, sensor_type: str = "sensor", msg_type=Int32,
                  timer_period: float = 0.5, queue_size: int = 10):
-        super().__init__(f"{sensor_type}_node")
+        self.sensor_type = sensor_type
+        super().__init__(f"{self.sensor_type}_node")
 
-        self.sensor_name = sensor_type
         self.msg_type = msg_type
         self.timer_period = timer_period
         self.queue_size = queue_size
 
         # Publisher
         self._publisher = self.create_publisher(
-            msg_type, f"{sensor_type}_range", queue_size
+            msg_type, f"{self.sensor_type}_range", queue_size
         )
 
         # Timer
         self._timer = self.create_timer(self.timer_period, self.publish_msg)
 
         self.get_logger().info(
-            f"{sensor_type.capitalize()} Sensor Node has been started."
-        ) 
-        
+            f"{self.sensor_type.capitalize()} Sensor Node has been started."
+        )
+
     @abstractmethod
     def generate_data(self) -> Any:
         """Generate sensor data. Must be implemented by subclasses."""
@@ -40,6 +41,3 @@ class SensorNode(Node,IPublisher,ABC):
         msg.data = data_value
         self._publisher.publish(msg)
         # self.get_logger().info(f"Publishing: {msg.data}")
-
-
-
