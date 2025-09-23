@@ -27,15 +27,17 @@ ros2 run mutli_sensor_validator logger_node
 #### Libraries Used
 
 1. **ROS2 (rclpy)** - Robotics middleware for communication
-2. **Standard Python libraries** - No external dependencies for core functionality
+2. **PyGame** - For joystick input
+3. **Standard Python libraries** - No external dependencies for core functionality
 
 #### Design Choices
 
-1. **Strategy Pattern** - For interchangeable smoothing algorithms
-2. **Observer Pattern** - ROS2 pub/sub naturally implements this
-3. **Single Responsibility** - Each class has a clear, focused purpose
-4. **Open/Closed Principle** - Easy to extend with new smoothing strategies
-5. **Dependency Inversion** - Easy to inject the smoothing startegy into navigation
+1. **Observer Pattern** - ROS2 pub/sub naturally implements this
+2. **Single Responsibility** - Each class has a clear, focused purpose
+3. **Open/Closed Principle** - Easy to extend with new sensors
+4. **Dependency Inversion Principle** - Easy to inject the names of sensor topics into the validator or inject the sensors themselves
+5. **Liskov Substitution Principle** - Easy to substitute SensorNode with different types of sensors (eg. UltraSonicSensorNode, InfraredSensorNode...)
+6. **Interface Segregation Principle** - Having the IPublisher interface to implement the publish_msg functionality
 
 ## ROV Control System
 
@@ -98,7 +100,7 @@ navigation_node.set_smoothing_strategy(ExponentialSmoothing(alpha=0.2))
 2. **Observer Pattern** - ROS2 pub/sub naturally implements this
 3. **Single Responsibility** - Each class has a clear, focused purpose
 4. **Open/Closed Principle** - Easy to extend with new smoothing strategies
-5. **Dependency Inversion** - Easy to inject the smoothing startegy into navigation
+5. **Dependency Injection** - Easy to inject the smoothing startegy into navigation
 
 #### Key Features
 
