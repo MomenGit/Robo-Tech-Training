@@ -1,7 +1,7 @@
 from random import randint
 from std_msgs.msg import Int32
-from sensor_node import SensorNode
-from utility import Utility
+from multi_sensor_validator.sensor_node import SensorNode
+from multi_sensor_validator.utility import Utility
 
 
 class InfraredSensorNode(SensorNode):
