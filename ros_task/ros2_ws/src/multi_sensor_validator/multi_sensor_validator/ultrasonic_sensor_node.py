@@ -1,6 +1,6 @@
 from random import randint
-from multi_sensor_validator.utility import Utility
-from multi_sensor_validator.sensor_node import SensorNode
+from utility import Utility
+from sensor_node import SensorNode
 from std_msgs.msg import Int32
 
 

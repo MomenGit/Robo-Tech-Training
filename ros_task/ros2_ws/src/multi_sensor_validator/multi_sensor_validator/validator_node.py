@@ -1,5 +1,5 @@
-from multi_sensor_validator.i_publisher import IPublisher
-from multi_sensor_validator.utility import Utility
+from i_publisher import IPublisher
+from utility import Utility
 from rclpy.node import Node
 from std_msgs.msg import String, Int32
 
