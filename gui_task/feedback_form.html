@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/public/form_style.css" />
+  </head>
+  <body>
+    <main>
+      <header><h1>Feedback form</h1></header>
+      <form action="" method="post">
+        <div class="form-field">
+          <label for="name">Person name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John doe"
+          />
+        </div>
+        <div class="form-field">
+          <label for="age">Person age</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            required
+            placeholder="22"
+            max="25"
+            min="19"
+          />
+        </div>
+        <div class="form-field">
+          <label for="textbook-satifaction">Satisfaction with Textbook</label>
+          <select
+            name="textbookSatifaction"
+            id="textbook-satifaction"
+            placeholder="Satisfaction"
+            required
+          >
+            <option>---</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="notSatisfied">Not satisfied</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="textbook-comment">Comment about textbook</label>
+          <textarea name="textbookComment" id="textbook-comment"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="speed-satisfaction"
+            >Satisfaction with session speed</label
+          >
+          <label for="very-fast-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="very-fast-satisfaction"
+              name="speedSatisfaction"
+              required
+              value="veryFast"
+            />
+            Very fast
+          </label>
+          <label for="good-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="good-satisfaction"
+              name="speedSatisfaction"
+              required
+              value="good"
+            />
+            Good
+          </label>
+          <label for="very-slow-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="very-slow-satisfaction"
+              name="speedSatisfaction"
+              required
+              value="verySlow"
+            />
+            Very slow
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="speed-comment">Comment about session speed</label>
+          <textarea name="speedComment" id="speed-comment"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="clarity-satisfaction"
+            >Satisfaction with session clarity</label
+          >
+          <label for="clear-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="clear-satisfaction"
+              name="clarity-satisfaction"
+              value="clear"
+            />
+            Clear
+          </label>
+          <label for="vague-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="vague-satisfaction"
+              name="clarity-satisfaction"
+              value="vague"
+            />
+            Vague
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="clarity-comment">Comment about sesion clarity</label>
+          <textarea name="clarityComment" id="clarity-comment"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="clarity-satisfaction"
+            >Satisfaction with session ouput</label
+          >
+          <label for="beneficial-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="beneficial-satisfaction"
+              name="output-satisfaction"
+              value="beneficial"
+            />
+            Beneficial
+          </label>
+          <label for="vague-satisfaction" class="radio">
+            <input
+              type="radio"
+              id="vague-satisfaction"
+              name="output-satisfaction"
+              value="vague"
+            />
+            Vague
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="output-comment">Comment about session output</label>
+          <textarea name="outputComment" id="output-comment"></textarea>
+        </div>
+        <div class="form-field">
+          <label for="next-topics">Suggested next workshop topics</label>
+          <label for="clear-satisfaction" class="checkbox">
+            <input
+              type="checkbox"
+              id="clear-satisfaction"
+              name="nextTopics"
+              value="clear"
+            />
+            Styling libraries (e.g., Tailwind CSS)
+          </label>
+          <label for="vague-satisfaction" class="checkbox">
+            <input
+              type="checkbox"
+              id="vague-satisfaction"
+              name="nextTopics"
+              value="vague"
+            />
+            Web bundlers (e.g., Vite, Webpack)
+          </label>
+          <label for="vague-satisfaction" class="checkbox">
+            <input
+              type="checkbox"
+              id="vague-satisfaction"
+              name="nextTopics"
+              value="vague"
+            />
+            Web frameworks (e.g., React, Vue, Angular)
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="project-peer">Level 1 project peer</label>
+          <select name="projectPeer" id="project-peer" required>
+            <option>---</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="notSatisfied">Not satisfied</option>
+          </select>
+        </div>
+        <button id="submit-btn" type="submit">Submit</button>
+        <a href="#" style="margin: 0px auto">Form results</a>
+      </form>
+    </main>
+  </body>
+</html>

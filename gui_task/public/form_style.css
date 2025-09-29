@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+  margin: 16px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: start;
+  align-items: start;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: 400;
+}
+textarea {
+  width: 100%;
+  padding-right: 0px;
+  resize: none;
+}
+
+.radio,
+.checkbox {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#submit-btn {
+  align-self: center;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: goldenrod;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+}
