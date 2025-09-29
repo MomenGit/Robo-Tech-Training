@@ -93,48 +93,52 @@
           <label for="clarity-satisfaction"
             >Satisfaction with session clarity</label
           >
-          <label for="clear-satisfaction" class="radio">
+          <label for="clarity-clear" class="radio">
             <input
               type="radio"
-              id="clear-satisfaction"
-              name="clarity-satisfaction"
+              id="clarity-clear"
+              name="claritySatisfaction"
               value="clear"
+              required
             />
             Clear
           </label>
-          <label for="vague-satisfaction" class="radio">
+          <label for="clarity-vague" class="radio">
             <input
               type="radio"
-              id="vague-satisfaction"
-              name="clarity-satisfaction"
+              id="clarity-vague"
+              name="claritySatisfaction"
               value="vague"
+              required
             />
             Vague
           </label>
         </div>
         <div class="form-field">
-          <label for="clarity-comment">Comment about sesion clarity</label>
+          <label for="clarity-comment">Comment about session clarity</label>
           <textarea name="clarityComment" id="clarity-comment"></textarea>
         </div>
         <div class="form-field">
-          <label for="clarity-satisfaction"
-            >Satisfaction with session ouput</label
+          <label for="output-satisfaction"
+            >Satisfaction with session output</label
           >
-          <label for="beneficial-satisfaction" class="radio">
+          <label for="output-beneficial" class="radio">
             <input
               type="radio"
-              id="beneficial-satisfaction"
-              name="output-satisfaction"
+              id="output-beneficial"
+              name="outputSatisfaction"
               value="beneficial"
+              required
             />
             Beneficial
           </label>
-          <label for="vague-satisfaction" class="radio">
+          <label for="output-vague" class="radio">
             <input
               type="radio"
-              id="vague-satisfaction"
-              name="output-satisfaction"
+              id="output-vague"
+              name="outputSatisfaction"
               value="vague"
+              required
             />
             Vague
           </label>
@@ -145,30 +149,48 @@
         </div>
         <div class="form-field">
           <label for="next-topics">Suggested next workshop topics</label>
-          <label for="clear-satisfaction" class="checkbox">
+          <label for="topic-nodejs" class="checkbox">
             <input
               type="checkbox"
-              id="clear-satisfaction"
+              id="topic-nodejs"
               name="nextTopics"
-              value="clear"
+              value="nodejs"
+            />
+            Node.js
+          </label>
+          <label for="topic-network" class="checkbox">
+            <input
+              type="checkbox"
+              id="topic-network"
+              name="nextTopics"
+              value="network"
+            />
+            Network Protocols (TCP, UDP, HTTP, WebSocket)
+          </label>
+          <label for="topic-styling" class="checkbox">
+            <input
+              type="checkbox"
+              id="topic-styling"
+              name="nextTopics"
+              value="styling"
             />
             Styling libraries (e.g., Tailwind CSS)
           </label>
-          <label for="vague-satisfaction" class="checkbox">
+          <label for="topic-bundlers" class="checkbox">
             <input
               type="checkbox"
-              id="vague-satisfaction"
+              id="topic-bundlers"
               name="nextTopics"
-              value="vague"
+              value="bundlers"
             />
             Web bundlers (e.g., Vite, Webpack)
           </label>
-          <label for="vague-satisfaction" class="checkbox">
+          <label for="topic-frameworks" class="checkbox">
             <input
               type="checkbox"
-              id="vague-satisfaction"
+              id="topic-frameworks"
               name="nextTopics"
-              value="vague"
+              value="frameworks"
             />
             Web frameworks (e.g., React, Vue, Angular)
           </label>
