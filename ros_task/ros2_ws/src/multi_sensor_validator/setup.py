@@ -23,7 +23,9 @@ setup(
             'ultrasonic_sensor_node = multi_sensor_validator.ultrasonic_sensor_node:main',
             'infrared_sensor_node = multi_sensor_validator.infrared_sensor_node:main',
             'validator_node = multi_sensor_validator.validator_node:main',
-            'logger_node = multi_sensor_validator.logger_node:main'
+            'logger_node = multi_sensor_validator.logger_node:main',
+            'obstacle_server_node = multi_sensor_validator.obstacle_server_node:main',
+            'navigation_client_node = multi_sensor_validator.navigation_client_node:main'
         ],
     },
 )

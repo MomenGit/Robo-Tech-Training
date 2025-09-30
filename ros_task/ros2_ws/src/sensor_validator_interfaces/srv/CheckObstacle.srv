@@ -1,0 +1,4 @@
+sensor_msgs/Range[] sensor_values
+---
+bool obstacle_detected
+string message

@@ -1,6 +1,8 @@
 <launch>
-  <node pkg="multi_sensor_validator" exec="ultrasonic_sensor_node" name="ultrasonic_sensor_node" namespace="multi_sensor_validator"/>
-  <node pkg="multi_sensor_validator" exec="infrared_sensor_node" name="infrared_sensor_node" namespace="multi_sensor_validator"/>
+  <!-- <node pkg="multi_sensor_validator" exec="ultrasonic_sensor_node" name="ultrasonic_sensor_node" namespace="multi_sensor_validator"/> -->
+  <!-- <node pkg="multi_sensor_validator" exec="infrared_sensor_node" name="infrared_sensor_node" namespace="multi_sensor_validator"/> -->
   <node pkg="multi_sensor_validator" exec="validator_node" name="validator_node" namespace="multi_sensor_validator"/>
   <node pkg="multi_sensor_validator" exec="logger_node" name="logger_node" namespace="multi_sensor_validator"/>
+  <node pkg="multi_sensor_validator" exec="obstacle_server_node" name="obstacle_server_node" namespace="multi_sensor_validator"/>
+  <node pkg="multi_sensor_validator" exec="navigation_client_node" name="navigation_client_node" namespace="multi_sensor_validator"/>
 </launch>
